@@ -21,6 +21,17 @@ body
 
 }
 
+#about
+{
+	position: fixed;
+	bottom: 0px;
+	right: 0px;
+	font-size: 13px;
+	background-color: #d0d0d0;
+	border-top-left-radius: 4px;
+	padding: 8px 10px;
+}
+
 .box
 {
 	background-color: #3B465C;
@@ -154,6 +165,7 @@ h1
 {
 	border-bottom-right-radius: 4px;
 }
+
 /*****/
 
 .cell.type-1 /* T */
@@ -220,11 +232,10 @@ h1
 
 /* Hold */
 /* in nextList when cell for tetronimo is 0 */
-/*#hold .class 
+/*#hold .cell 
 {
 	border: none;
 	background-color: transparent;
-	display: none !important;
 }*/
 
 /*.cell.type-emptyPreview:nth-child(2n)	
