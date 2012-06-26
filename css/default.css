@@ -32,6 +32,32 @@ body
 	padding: 8px 10px;
 }
 
+#controls
+{
+	position: absolute;
+	top: 250px;
+	left: 0px;
+	font-size: 13px;
+	color: #3B465C;
+}
+
+#controls ul
+{
+	list-style-type: none;
+}
+
+#controls li
+{
+	margin-bottom:4px;
+}
+
+#controls div
+{
+	/*text-align: right;
+	width: 32px;*/
+	display: inline-block;
+}
+
 .box
 {
 	background-color: #3B465C;
