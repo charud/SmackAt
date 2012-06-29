@@ -1,4 +1,3 @@
-
 var TT = TT || {};
 
 TT.Connection = function(options) {
@@ -7,7 +6,7 @@ TT.Connection = function(options) {
 	var _id;
 
 	me.init = function() {
-		_socket = io.connect('http://localhost');
+		_socket = io.connect('http://smack.at');
 		_socket.on("status", function(data) {
 			_id = data.id;
 		});
