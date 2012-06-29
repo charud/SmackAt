@@ -1,0 +1,23 @@
+{
+  "author": "Charlie Rudenstål <charlie4@gmail.com>",
+  "name": "SmackAt",
+  "description": "Game server",
+  "version": "0.0.1",
+  "homepage": "smack.at",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/charlie-rudenstal/SmackAt.git"
+  },
+  "main": "server.js",
+  "scripts": {
+    "test": "test"
+  },
+  "engines": {
+    "node": "~0.6.7"
+  },
+  "dependencies": {
+      "express": "3.x.x",
+      "socket.io": "0.9.x"
+    },
+  "devDependencies": {}
+}

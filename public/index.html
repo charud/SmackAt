@@ -1,0 +1,72 @@
+<html>
+<head>
+	<title>SmackAt!</title>
+	<script type="text/javascript" src="js/JQuery/jquery.js"></script>
+	<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+	<script type="text/javascript" src="js/TT/Loader.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/default.css">
+	<link rel="stylesheet" type="text/css" href="css/keys.css">
+</head>
+<body>
+
+	<div id="game">
+
+		<div id="stage"></div>
+		<div id="scoreFlash"></div>
+
+		<div id="left">
+			<div class="box">
+				<h1 class="shadow">Hold</h1>
+				<div class="content">
+					<div id="hold"></div>
+				</div>
+			</div>
+
+			<div class="box">
+				<h1 class="shadow">Lines</h1>
+				<div class="content">
+					<div id="lines" class="big shadow right">0</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="right">
+			<div class="box">
+				<h1 class="shadow">Next</h1>
+				<div class="content">
+					<div id="next"></div>
+				</div>
+			</div>
+
+			<div class="box">
+				<h1 class="shadow">Score</h1>
+				<div class="content">
+					<div id="score" class="big shadow right">0</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="controls">
+			<ul>
+				<li><div><kbd>A</kbd></div> Rotate Left</li>
+				<li><div><kbd>S</kbd></div> Rotate Right</li>
+				<li><div><kbd>Shift</kbd></div> Hold</li>
+			</ul>
+		</div>
+
+		<div id="players" class="box">
+			<h1 class="shadow">Players</h1>
+			<ul>
+				<li class="template player">Player: [score] [isCurrentPlayer]</li>
+			</ul>
+		</div>
+
+	</div>
+
+
+	<div id="about">
+		@Github: <a href="https://github.com/charlie-rudenstal/SmackAt">https://github.com/charlie-rudenstal/SmackAt</a> 
+	</div>
+
+</body>
+</html>

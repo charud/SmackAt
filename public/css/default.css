@@ -1,0 +1,299 @@
+*
+{
+	margin: 0px;
+	padding: 0px;
+	font-family: helvetica, arial bold, sans-serif;
+}
+
+body
+{
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#93F0FF), to(#3A7BCD));
+}
+
+.template 
+{
+	display: none;
+}
+
+#game
+{
+	position: relative;
+	width: 530px;
+	height :100px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+}
+
+#about
+{
+	position: fixed;
+	bottom: 0px;
+	right: 0px;
+	font-size: 13px;
+	background-color: #d0d0d0;
+	border-top-left-radius: 4px;
+	padding: 8px 10px;
+}
+
+#players
+{
+	position: absolute;
+	left: 530px;
+	width: 200px;
+}
+
+#players ul
+{
+	list-style-type: none;
+}
+
+#players .player
+{
+	background-color: #3B465C;
+	padding: 8px 5px;
+	font-size: 12px;
+	color: #eee;
+}
+
+#players .player:nth-child(2n)
+{
+	background-color: #4B566C;
+}
+
+#controls
+{
+	position: absolute;
+	top: 250px;
+	left: 0px;
+	font-size: 13px;
+	color: #3B465C;
+}
+
+#controls ul
+{
+	list-style-type: none;
+}
+
+#controls li
+{
+	margin-bottom:4px;
+}
+
+#controls div
+{
+	/*text-align: right;
+	width: 32px;*/
+	display: inline-block;
+}
+
+.box
+{
+	background-color: #3B465C;
+	width: 125px;
+	border-radius: 4px;
+	margin-bottom: 10px;
+}
+
+.box h1
+{
+	background-color: #3D6DD9;
+	padding: 6px 0px;
+	text-align: center;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+}
+
+.box .content
+{
+	min-height: 45px;
+	padding: 6px 12px;
+}
+
+.shadow
+{
+	color: white;
+	text-shadow: 0px 0px 5px #444, 1px 1px 1px #444;
+}
+
+.big
+{
+	font-size: 38px;
+	font-weight: bold;
+}
+
+.right
+{
+	text-align: right;
+}
+
+h1
+{
+	font-family: helvetica, arial, sans-serif;
+	font-size: 18px;
+	color: white;
+}
+
+#left
+{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+#stage
+{
+	left: 138px;
+	position: absolute;
+}
+
+#right
+{
+	position: absolute;
+	top: 0px;
+	left: 392px;
+}
+
+#hold, #next
+{
+	position: relative;
+	height: 80px;
+}
+
+#scoreFlash
+{
+	width: 225px;
+	height: 255px;
+	position: absolute;
+	left: 150px;
+	top: 250px;
+	text-align: center;
+}
+
+#scoreFlash .points
+{
+	position: absolute;
+	top: 150px;
+	left: 0px;
+	text-align: center;
+	width: 240px;
+	height: 150px;
+	font-size: 35px;
+	opacity: 0;
+	color: #EEEE66;
+	color: white;
+	font-weight: bold;
+	font-family: helvetica, arial bold, sans-serif;
+	text-shadow: 0px 0px 5px #000, 1px 1px 1px #000;
+}
+
+.cell
+{
+	width: 20px;
+	height: 20px;
+	display: block;
+	position: absolute;
+	background-color: #3B465C;
+	border-left: 1px solid #708093;
+	border-top: 1px solid #607083;
+}
+
+.cell:nth-child(2n)	
+{
+	background-color: #4b566c;
+}
+
+/* rounded corners around game field */
+.cell:nth-child(1)
+{
+	border-top-left-radius: 4px;
+}
+.cell:nth-child(12)
+{
+	border-top-right-radius: 4px;
+}
+.cell:nth-child(289)
+{
+	border-bottom-left-radius: 4px;
+}
+.cell:nth-child(300)
+{
+	border-bottom-right-radius: 4px;
+}
+
+/*****/
+
+.cell.type-1 /* T */
+{
+	background: none;
+	background-color: #E854CE;
+	border: 1px solid #C834AE;
+	border: 1px solid #F874DE;
+}
+
+.cell.type-2 /* Block */
+{
+	background: none;
+	background-color: #F10801;	
+	border: 1px solid #FF4831;
+}
+
+.cell.type-3 /* Line */
+{
+	background: none;
+	background-color: #10B7FC;
+	border: 1px solid #33D7FF;
+}
+
+.cell.type-4 /* S */
+{
+	background: none;
+	background-color: #6BD611;
+	border: 1px solid #8DF433;
+}
+
+.cell.type-5 /* Z */
+{
+	background: none;
+	background-color: #FA2B4B;
+	border: 1px solid #FF4B6B;
+}
+
+.cell.type-6 /* L */
+{
+	background: none;
+	background-color: #F98A31;
+	border: 1px solid #FFAA51;
+}
+
+.cell.type-7 /* J */
+{
+	background: none;
+	background-color: #4686FA;
+	border: 1px solid #66A6FF;
+}
+
+.cell
+{
+	-webkit-transition-property: all; 
+	-webkit-transition-duration: 0.02s; /*0.35s;*/
+}
+
+.cell.current
+{
+	-webkit-transition-property: none !important; 
+	-webkit-transition-duration: 0s !important; /*0.35s;*/
+}
+
+/* Hold */
+/* in nextList when cell for tetronimo is 0 */
+/*#hold .cell 
+{
+	border: none;
+	background-color: transparent;
+}*/
+
+/*.cell.type-emptyPreview:nth-child(2n)	
+{
+	background-color: transparent;
+}*/
