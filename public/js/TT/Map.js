@@ -10,7 +10,7 @@ TT.Map = function(data)
 		if (data) {
 			me.data = TT.Helpers.cloneArray(data);
 		} else {
-			me.generate(12, 25);
+			me.generate(10, 20);
 		}
 	};
 

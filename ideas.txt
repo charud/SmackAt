@@ -1,0 +1,10 @@
+Smack.at Ideas
+==============
+
+- Challenges
+	Start with a (predefined) random map of 10-15 or so rows
+	You always get the same combination and order of tetrominos for each challenge
+	You win when you get below 4 lines
+	Use as few tetrominos as possible
+
+

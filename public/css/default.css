@@ -39,7 +39,7 @@ body
 #players
 {
 	position: absolute;
-	left: 530px;
+	left: 488px;
 	width: 200px;
 }
 
@@ -151,7 +151,7 @@ h1
 {
 	position: absolute;
 	top: 0px;
-	left: 392px;
+	left: 352px;
 }
 
 #hold, #next
