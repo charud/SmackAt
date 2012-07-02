@@ -1,0 +1,324 @@
+*
+{
+	margin: 0px;
+	padding: 0px;
+	font-family: helvetica, arial bold, sans-serif;
+}
+
+body
+{
+	background-color: #212121;
+	color: #eee;
+}
+
+.template 
+{
+	display: none;
+}
+
+#game
+{
+	position: relative;
+	width: 530px;
+	height :100px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+}
+
+#about
+{
+	position: fixed;
+	bottom: 0px;
+	right: 0px;
+	font-size: 13px;
+	background-color: #d0d0d0;
+	border-top-left-radius: 4px;
+	padding: 8px 10px;
+	color: #333;
+}
+
+#logo
+{
+	position: fixed;
+	left: 10px;
+	bottom: 10px;
+}
+
+.logo, .logo em
+{
+	font-family: impact;
+	font-size: 32px;
+	font-weight: normal;
+	font-style: normal;
+	text-transform: uppercase;
+}
+
+.logo
+{	
+	background-color: #f0f0f0;
+	border-radius: 5px;
+	color: #0d0d0d;
+	line-height: 29px;
+	padding-left: 1px;
+	padding-right: 2px;
+}
+
+.logo em
+{
+	color: #3d6dd9;
+}
+
+#players
+{
+	position: absolute;
+	left: 488px;
+	width: 200px;
+}
+
+#players ul
+{
+	list-style-type: none;
+}
+
+#players .player
+{
+	background-color: #3B465C;
+	padding: 8px 5px;
+	font-size: 12px;	
+}
+
+#players .player:nth-child(2n)
+{
+	background-color: #4B566C;
+}
+
+#controls
+{
+	position: absolute;
+	top: 140px;
+	left: 0px;
+	font-size: 13px;
+}
+
+#controls ul
+{
+	list-style-type: none;
+}
+
+#controls li
+{
+	margin-bottom:4px;
+}
+
+#controls div
+{
+	/*text-align: right;
+	width: 32px;*/
+	display: inline-block;
+}
+
+.box
+{
+	width: 100px;
+	border-radius: 4px;
+	margin-bottom: 10px;
+}
+
+.box .content
+{
+	min-height: 35px;
+	padding: 6px 12px;
+}
+
+.big
+{
+	font-size: 26px;
+}
+
+.right
+{
+	text-align: right;
+}
+
+.header
+{
+	border-top: 1px solid #4b566c;
+}
+
+.header h1
+{
+	margin-top: -9px;
+	background-color: #212121;
+	width: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-right: 2px;
+
+	font-family: helvetica, arial, sans-serif;
+	font-size: 14px;
+	font-weight: normal;
+	color: white;
+	text-align: center;
+
+
+}
+
+#left
+{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+#mainStage
+{
+	left: 138px;
+	position: absolute;
+}
+
+#right
+{
+	position: absolute;
+	top: 0px;
+	left: 352px;
+}
+
+#hold, #next
+{
+	position: relative;
+	height: 80px;
+}
+
+#scoreFlash
+{
+	width: 225px;
+	height: 255px;
+	position: absolute;
+	left: 150px;
+	top: 250px;
+	text-align: center;
+}
+
+#scoreFlash .points
+{
+	position: absolute;
+	top: 150px;
+	left: 0px;
+	text-align: center;
+	width: 240px;
+	height: 150px;
+	font-size: 35px;
+	opacity: 0;
+	color: #EEEE66;
+	color: white;
+	font-weight: bold;
+	font-family: helvetica, arial bold, sans-serif;
+	text-shadow: 0px 0px 5px #000, 1px 1px 1px #000;
+}
+
+.cell
+{
+	width: 20px;
+	height: 20px;
+	display: block;
+	position: absolute;
+	background-color: #3B465C;
+	border-left: 1px solid #708093;
+	border-top: 1px solid #607083;
+}
+
+.cell:nth-child(2n)	
+{
+	background-color: #4b566c;
+}
+
+
+/* Preview cells for hold and next are still rendered as cells but empty
+   cells should be formatted differently as they are not part of a map */
+.preview .cell.type-0
+{
+	display: none;
+}
+
+/* rounded corners around game field */
+.stage .cell:nth-child(1)
+{
+	border-top-left-radius: 4px;
+}
+.stage .cell:nth-child(10)
+{
+	border-top-right-radius: 4px;
+}
+.stage .cell:nth-child(191)
+{
+	border-bottom-left-radius: 4px;
+}
+.stage .cell:nth-child(200)
+{
+	border-bottom-right-radius: 4px;
+}
+
+/*****/
+
+.cell.type-1 /* T */
+{
+	background: none;
+	background-color: #E854CE !important;
+	border: 1px solid #F874DE;
+}
+
+.cell.type-2 /* Block */
+{
+	background: none;
+	background-color: #F10801 !important;
+	border: 1px solid #FF4831;
+}
+
+.cell.type-3 /* Line */
+{
+	background: none;
+	background-color: #10B7FC !important;
+	border: 1px solid #33D7FF;
+}
+
+.cell.type-4 /* S */
+{
+	background: none;
+	background-color: #6BD611 !important;
+	border: 1px solid #8DF433;
+}
+
+.cell.type-5 /* Z */
+{
+	background: none;
+	background-color: #FA2B4B !important;
+	border: 1px solid #FF4B6B;
+}
+
+.cell.type-6 /* L */
+{
+	background: none;
+	background-color: #F98A31 !important;
+	border: 1px solid #FFAA51;
+}
+
+.cell.type-7 /* J */
+{
+	background: none;
+	background-color: #4686FA !important;
+	border: 1px solid #66A6FF;
+}
+
+.cell
+{
+	-webkit-transition-property: all; 
+	-webkit-transition-duration: 0.02s; /*0.35s;*/
+}
+
+.cell.current
+{
+	-webkit-transition-property: none !important; 
+	-webkit-transition-duration: 0s !important; /*0.35s;*/
+}
+
