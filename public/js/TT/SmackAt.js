@@ -17,6 +17,7 @@ TT.SmackAt = (function(me)
 	var _tetrominoGenerator;
 	var _hold;
 	var _scoreCounter;
+	var _currentPlayer;
 
 	var _elmStage;
 
@@ -47,11 +48,16 @@ TT.SmackAt = (function(me)
 	{
 		TT.Mixin.Event(me);
 
-		_elmStage = $("#stage");
+		_elmStage = $("#mainStage");
 		_map = new TT.Map();
 		_tetrominoGenerator = new TT.TetrominoGenerator();
 		_scoreCounter = new TT.ScoreCounter();
 		_hold = new TT.Hold();
+		_currentPlayer = TT.Container.create("CurrentPlayer");
+
+		_scoreCounter.on("scoreChanged", function(score) {
+			_currentPlayer.update(score, _map.data);
+		});
 
 		$(window).on("keydown", onKeyDown);
 		$(window).on("keyup", onKeyUp);
@@ -135,7 +141,7 @@ TT.SmackAt = (function(me)
 	
 		var elementsToRemove = [];
 		for (var lineNumber in lines) { 
-			var lineElements = $("#stage .cell[data-y=" + lineNumber + "]");
+			var lineElements = $("#mainStage .cell[data-y=" + lineNumber + "]");
 			elementsToRemove = elementsToRemove.concat(lineElements.get());
 		}
 

@@ -39,6 +39,7 @@ var Player = function(options) {
 	var me = {};
 	me.id = options.id;
 	me.score = 0;
+	me.map = [];
 	return me;
 }
 
@@ -73,8 +74,9 @@ io.sockets.on('connection', function(socket) {
 		io.sockets.emit("players", playerList.getAll());
 	});
 
-	socket.on("score", function(score) {
-		playerList.get(socket.id).score = score;
+	socket.on("update", function(data) {
+		playerList.get(socket.id).score = data.score;
+		playerList.get(socket.id).map = data.map;
 		io.sockets.emit("players", playerList.getAll());
 		//socket.broadcast.emit("players", playerList.getAll());
 	});

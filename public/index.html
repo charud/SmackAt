@@ -1,47 +1,54 @@
+<!DOCTYPE html>
 <html>
 <head>
 	<title>SmackAt!</title>
 	<script type="text/javascript" src="js/JQuery/jquery.js"></script>
 	<script type="text/javascript" src="/socket.io/socket.io.js"></script>
 	<script type="text/javascript" src="js/TT/Loader.js"></script>
-	<link rel="stylesheet" type="text/css" href="css/default.css">
+	<link rel="stylesheet" type="text/css" href="css/default.dark.css">
 	<link rel="stylesheet" type="text/css" href="css/keys.css">
 </head>
 <body>
 
 	<div id="game">
 
-		<div id="stage"></div>
+		<div id="mainStage" class="stage"></div>
 		<div id="scoreFlash"></div>
 
 		<div id="left">
 			<div class="box">
-				<h1 class="shadow">Hold</h1>
 				<div class="content">
-					<div id="hold"></div>
+					<div id="hold" class="preview"></div>
+				</div>
+				<div class="header">
+					<h1>Hold</h1>
 				</div>
 			</div>
 
-			<div class="box">
+			<!--<div class="box">
 				<h1 class="shadow">Lines</h1>
 				<div class="content">
 					<div id="lines" class="big shadow right">0</div>
 				</div>
-			</div>
+			</div>-->
 		</div>
 
 		<div id="right">
 			<div class="box">
-				<h1 class="shadow">Next</h1>
 				<div class="content">
-					<div id="next"></div>
+					<div id="next" class="preview"></div>
+				</div>
+				<div class="header">
+					<h1>Next</h1>
 				</div>
 			</div>
 
 			<div class="box">
-				<h1 class="shadow">Score</h1>
 				<div class="content">
-					<div id="score" class="big shadow right">0</div>
+					<div id="score" class="big right">0</div>
+				</div>
+				<div class="header">
+					<h1>Score</h1>
 				</div>
 			</div>
 		</div>
@@ -56,14 +63,14 @@
 		</div>
 
 		<div id="players" class="box">
-			<h1 class="shadow">Players</h1>
-			<ul>
-				<li class="template player">Player: [score] [isCurrentPlayer]</li>
-			</ul>
 		</div>
 
 	</div>
 
+
+	<div id="logo">
+		<div class="logo">Smack<em>at</em></div>
+	</div>
 
 	<div id="about">
 		@Github: <a href="https://github.com/charlie-rudenstal/SmackAt">https://github.com/charlie-rudenstal/SmackAt</a> 

@@ -3,6 +3,8 @@ var TT = TT || {};
 TT.ScoreCounter = function()
 {
 	var me = {};
+	TT.Mixin.Event(me);
+
 	var _score = 0;
 	var _elmScoreFlash;
 	var _elmScore;
@@ -10,8 +12,6 @@ TT.ScoreCounter = function()
 	var _linesRemovedInARowCounter = 0;
 	var _backToBackTetrisCounter = 0;
 	var _lineCounter = 0;
-
-	var _currentPlayer = TT.Container.create("CurrentPlayer");
 
 	me.init = function()
 	{
@@ -93,7 +93,7 @@ TT.ScoreCounter = function()
 	me.raiseScore = function(points)
 	{
 		_score += points;
-		_currentPlayer.setScore(_score);
+		me.fire("scoreChanged", _score);
 		_elmScore.text(_score);
 	};
 

@@ -81,8 +81,8 @@ TT.Map = function(data)
 			elmCell.addClass("cell");
 			elmCell.addClass("type-" + data);
 			
-			elmCell.get(0).style.left = x * cellWidth;
-			elmCell.get(0).style.top = y * cellHeight;
+			elmCell.get(0).style.left = x * cellWidth + "px";
+			elmCell.get(0).style.top = y * cellHeight + "px";
 
 			elmCell.attr("data-x", x);
 			elmCell.attr("data-y", y);
