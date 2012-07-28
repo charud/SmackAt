@@ -1,0 +1,26 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Mocha Tests</title>
+  <link rel="stylesheet" href="vendor/mocha2.css" />
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script type="text/javascript" src="vendor/live.js"></script> <!-- if accessed from http:// tests will run automatically when any file is changed -->
+  <script type="text/javascript" src="vendor/chai.js"></script>
+  <script type="text/javascript" src="vendor/mocha.js"></script>
+  <script>
+    mocha.setup({ui: 'bdd', globals: ['script*', 'css']});
+    chai.should();
+    $(function(){ mocha.run() });
+  </script>
+
+  <!-- Sources -->
+  <!--<script src="/js/..."></script>-->
+  
+  <!-- Tests -->
+  <script src="src/array.test.js"></script>
+
+</head>
+<body>
+  <div id="mocha"></div>
+</body>
+</html>
