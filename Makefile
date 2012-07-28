@@ -1,5 +1,9 @@
+.SILENT:
+
+default: test-watch
+
 test: 
-		@node node_modules/mocha/bin/mocha -u bdd -R min test/src -r test/vendor/chai
+		node node_modules/mocha/bin/mocha -u bdd -R min test/src -r test/vendor/chai
 
 test-watch:
 		# mocha -w won't reload source files
@@ -11,10 +15,10 @@ test-watch:
 		#@nodemon -w test/src -w public/src node_modules/mocha/bin/mocha test/src -R min
 
 		# good old inotifywait does the trick
-		make test; \
+		make test
 
 		while true ; do \
-			inotifywait -r . ; \
+			inotifywait -qqr . ; \
 			make test ; \
 		done
 
