@@ -1,5 +1,5 @@
 test: 
-		@mocha -u bdd -R min -w test/src -r test/vendor/chai
+		@node node_modules/mocha/bin/mocha -u bdd -R min test/src -r test/vendor/chai
 
 test-watch:
 		# mocha -w won't reload source files
