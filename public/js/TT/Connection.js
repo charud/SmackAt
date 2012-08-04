@@ -6,7 +6,7 @@ TT.Connection = function(options) {
 	var _id;
 
 	me.init = function() {
-		_socket = io.connect("http://smack.at"); //io.connect('http://smack.at');
+		_socket = io.connect("//"+document.domain+":8081"); //io.connect('http://smack.at');
 		_socket.on("status", function(data) {
 			_id = data.id;
 		});
