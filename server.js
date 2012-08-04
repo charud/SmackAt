@@ -90,5 +90,7 @@ io.sockets.on('connection', function(socket) {
 if (module.parent) {
 	exports.app = app;
 } else {
-	server.listen(80);
+	
 }
+
+server.listen(8081);
