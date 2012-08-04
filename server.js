@@ -87,5 +87,8 @@ io.sockets.on('connection', function(socket) {
 });
 
 
-
-server.listen(80);
+if (module.parent) {
+	exports.app = app;
+} else {
+	server.listen(80);
+}
