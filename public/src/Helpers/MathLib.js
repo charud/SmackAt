@@ -1,6 +1,4 @@
-/* Copyright (c) 2012 Charlie Rudenstål */
 /*global require,module */
-
 if (typeof define !== 'function') { var define = require('amdefine')(module); }
 
 define(function(require) {
@@ -10,7 +8,7 @@ define(function(require) {
 	{
 	};
 
-	me.prototype.add = function(a, b) {
+	me.prototype.add = function(a, b) { 
 		return a + b;
 	};
 

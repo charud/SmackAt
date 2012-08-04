@@ -1,4 +1,3 @@
-/* Copyright (c) 2012 Charlie Rudenstål */
 /*global require, describe, it */
 var should = require('chai').should(); 
 var MathLib = require("../../public/src/Helpers/MathLib");
